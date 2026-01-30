@@ -22,7 +22,7 @@ function emphasizeLine(line: string, emphasize: string[] = []) {
   let out: React.ReactNode[] = [line];
 
   emphasize.forEach((term) => {
-    out = out.flatMap((chunk, idx) => {
+    out = out.flatMap((chunk, idx): React.ReactNode[] => {
       if (typeof chunk !== "string") return [chunk];
       const parts = chunk.split(new RegExp(`(${escapeRegExp(term)})`, "gi"));
       return parts.map((p, j) => {
