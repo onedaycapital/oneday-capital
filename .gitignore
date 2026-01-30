@@ -1,6 +1,9 @@
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# GitHub tokens / secrets (never commit)
+ghp_*
+
 # dependencies
 /node_modules
 /.pnp
